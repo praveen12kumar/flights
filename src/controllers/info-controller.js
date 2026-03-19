@@ -1,5 +1,7 @@
-const infoController = (req, res) => {
-  res.json({
+const { statusCodes } = require("http-status-codes");
+
+const info = (req, res) => {
+  res.status(statusCodes.OK).json({
     success: true,
     data: {
       name: "Airline Booking System",
@@ -9,4 +11,6 @@ const infoController = (req, res) => {
   });
 };
 
-module.exports = infoController;
+module.exports = {
+  info,
+};
