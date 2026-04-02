@@ -3,7 +3,7 @@ const airplaneRepository = new AirplaneRepository();
 
 async function createAirplane(data) {
   try {
-    const airplace = await airplaneRepository.createAirplane(data);
+    const airplace = await airplaneRepository.create(data);
     return airplace;
   } catch (error) {
     throw error;
